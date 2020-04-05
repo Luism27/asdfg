@@ -18,11 +18,6 @@ function actual() {
         let newLatLng = new L.LatLng(lat, lon);
         marcador.setLatLng(newLatLng);
         map.setView(newLatLng)
-
-        document.getElementsByClassName("lat")[0].innerHTML = lat;
-        document.getElementsByClassName("long")[0].innerHTML = lon;
-        document.getElementsByClassName("date")[0].innerHTML = fecha;
-        document.getElementsByClassName("hour")[0].innerHTML = hora;
         if (!poli) {
             poli = L.polyline([{ lat: lat, lon: lon }]).addTo(map);
         }

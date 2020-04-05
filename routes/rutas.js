@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 
 app.get("/datos", (req, res) => {
     if (conec) {
-        var sql = "SELECT * FROM designsyrus ORDER BY id DESC limit 1 ";
+        var sql = "SELECT * FROM syrusdb ORDER BY id DESC limit 1 ";
         conec.query(sql, function(err, result) {
             if (err) throw err;
             res.json(result[0]);
