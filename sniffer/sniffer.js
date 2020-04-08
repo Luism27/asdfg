@@ -9,6 +9,8 @@ server.on("error", err => {
 server.on("message", (msg, rinfo) => {
     //console.log(`server got: ${msg} from ${rinfo.address}:${rinfo.port}`);
     mensaje = msg.toString("utf8");
+    var re = /,/gi;
+    mensaje = mensaje.replace(re,'.');
     console.log(mensaje);
     let Fecha, Hora;
     let longitud, latitud, fech;
