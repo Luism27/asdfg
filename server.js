@@ -1,10 +1,11 @@
 //data base
 var mysql = require('mysql');
 module.exports.conec = mysql.createConnection({
-    host: "design.ck9qlt1qutiu.us-east-1.rds.amazonaws.com",
-  user: "dark",
-  password: "mr01121998",
-  database: 'design'
+    host: "caesolucionesiee.c7reutyzgzlp.us-east-1.rds.amazonaws.com",
+  user: "mauzoro",
+  password: "ronoroazoro123",
+  database: 'SyrusDataBase',
+  port:3305
 });
 
 //sniffer
@@ -15,5 +16,7 @@ require('./sniffer/sniffer');
 const express = require("express");
 module.exports.express1 = express;
 module.exports.app = express();
+module.exports.body = require("body-parser");
+
 //routes 
 require('./routes/rutas');
